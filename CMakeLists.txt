@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.2)
+cmake_minimum_required (VERSION 3.4)
 
 project (EntropyCalculator VERSION 0.1 LANGUAGES CXX)
 
@@ -9,9 +9,8 @@ add_executable(entropy ${SOURCE})
 
 target_include_directories(entropy PUBLIC src/)
 
+set_target_properties(entropy PROPERTIES CXX_STANDARD 11 
+  CXX_STANDARD_REQUIRED YES CXX_EXTENSIONS NO)
 
-# Set compiler options
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-target_compile_options(entropy PUBLIC -Wall)
+target_compile_options(entropy PUBLIC -Wall -std=c++11)
 

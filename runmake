@@ -1,0 +1,4 @@
+export CXX=/home/franco/COMPILER/gnu-8.3.0/bin/
+export C=/home/franco/COMPILER/gnu-8.3.0/bin/
+cmake ../
+make
